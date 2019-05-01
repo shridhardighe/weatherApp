@@ -4,6 +4,8 @@ const express = require('express');
 const utility = require("./utility/utility");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 const public_dir_name = path.join(__dirname,"../public");
 const templates_dir_name = path.join(__dirname,"../templates/views");
 const partials_dir_name = path.join(__dirname,"../templates/partials");
@@ -82,6 +84,6 @@ app.get('/About',(request,response) => {
 
 
 
-app.listen(3000,() => {
+app.listen(port ,() => {
     console.log("Server is up on port 3000!");
 });

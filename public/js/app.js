@@ -6,7 +6,7 @@ form.addEventListener("submit", (event) => {
     var textInput = document.querySelector("#location");
     console.log(textInput.value);
 
-    var uri = encodeURI("http://localhost:3000/weather?city=" + textInput.value);
+    var uri = encodeURI("/weather?city=" + textInput.value);
     //fetch('http://localhost:3000/weather?city=Boston').then((response) => {
     fetch(uri).then((response) => {
         console.log(response);
